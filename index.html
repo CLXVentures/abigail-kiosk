@@ -45,11 +45,21 @@ header h2{font-size:20px;margin:0;flex:1}
 .find button{font-size:17px;padding:0 16px;border:1px solid #ccc;border-radius:12px;background:#f4f4f4;color:#111}
 #res{grid-column:1/-1;padding:0} body.searching .colm{display:none} body:not(.searching) #res,body:not(.searching) #none{display:none}
 #none{grid-column:1/-1;color:#777;font-size:17px;padding:10px 2px}
+/* Pendant split: five buttons inside the menu row + the same buttons under the section heading */
+.prow{flex-direction:column;align-items:stretch;padding:16px}
+.pk{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:10px}
+.pk button{font-size:16px;font-weight:600;padding:12px 4px;border:1px solid #ccc;border-radius:10px;background:#f4f4f4;color:#111;font-family:inherit}
+.pk button span{font-weight:400;color:#777;font-size:13px}
+.kf{flex-basis:100%;display:flex;gap:6px}
+.kb{flex:1;font-size:16px;padding:10px 4px;border-radius:10px;border:1px solid #ccc;background:#f4f4f4;color:#111;font-family:inherit}
+.kb.on{background:#111;color:#fff;border-color:#111}
+.sec[data-k=coloured] .c:not([data-k=coloured]),.sec[data-k=pearl] .c:not([data-k=pearl]),
+.sec[data-k=clear] .c:not([data-k=clear]),.sec[data-k=solid] .c:not([data-k=solid]){display:none}
 </style></head><body>
 <div id="menu"><div class="upd">Updated 25/11/2026 22:37</div><h1>Find a piece</h1>
 <div class="find"><input id="q" type="search" placeholder="Type a name…" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"><button id="qx">Clear</button></div>
 <div id="res" class="g on"></div><div id="none">No match</div>
-<div class="colm"><h3>Earrings</h3><button class="row" data-go="s0"><span class="gn">Hoops</span><span class="tot">37</span></button><button class="row" data-go="s1"><span class="gn">Charm hoops</span><span class="tot">59</span></button><button class="row" data-go="s2"><span class="gn">Huggies</span><span class="tot">37</span></button><button class="row" data-go="s3"><span class="gn">Large hoops</span><span class="tot">18</span></button><button class="row" data-go="s5"><span class="gn">Studs</span><span class="tot">59</span></button><button class="row" data-go="s6"><span class="gn">Stud hoops</span><span class="tot">1</span></button><button class="row" data-go="s7"><span class="gn">Threads</span><span class="tot">2</span></button></div><div class="colm"><h3>Necklaces &amp; More</h3><button class="row" data-go="s8"><span class="gn">Pendant necklace</span><span class="tot">104</span></button><button class="row" data-go="s9"><span class="gn">Droplet necklace</span><span class="tot">18</span></button><button class="row" data-go="s10"><span class="gn">Chain necklace</span><span class="tot">24</span></button><button class="row" data-go="s11"><span class="gn">Bracelets</span><span class="tot">48</span></button><button class="row" data-go="s12"><span class="gn">Anklets</span><span class="tot">6</span></button><button class="row" data-go="s13"><span class="gn">Rings</span><span class="tot">46</span></button><button class="row" data-go="s14"><span class="gn">Ear cuffs</span><span class="tot">2</span></button></div><div class="colm wide"><button class="row" data-go="s16"><span class="gn">Other</span><span class="tot">4</span></button></div></div>
+<div class="colm"><h3>Earrings</h3><button class="row" data-go="s0"><span class="gn">Hoops</span><span class="tot">37</span></button><button class="row" data-go="s1"><span class="gn">Charm hoops</span><span class="tot">59</span></button><button class="row" data-go="s2"><span class="gn">Huggies</span><span class="tot">37</span></button><button class="row" data-go="s3"><span class="gn">Large hoops</span><span class="tot">18</span></button><button class="row" data-go="s5"><span class="gn">Studs</span><span class="tot">59</span></button><button class="row" data-go="s6"><span class="gn">Stud hoops</span><span class="tot">1</span></button><button class="row" data-go="s7"><span class="gn">Threads</span><span class="tot">2</span></button></div><div class="colm"><h3>Necklaces &amp; More</h3><div class="row prow"><span class="gn">Pendant necklace</span><div class="pk"><button data-go="s8" data-k="all">All <span>104</span></button><button data-go="s8" data-k="coloured">Coloured <span>12</span></button><button data-go="s8" data-k="pearl">Pearl <span>13</span></button><button data-go="s8" data-k="clear">Clear <span>18</span></button><button data-go="s8" data-k="solid">Solid <span>61</span></button></div></div><button class="row" data-go="s9"><span class="gn">Droplet necklace</span><span class="tot">18</span></button><button class="row" data-go="s10"><span class="gn">Chain necklace</span><span class="tot">24</span></button><button class="row" data-go="s11"><span class="gn">Bracelets</span><span class="tot">48</span></button><button class="row" data-go="s12"><span class="gn">Anklets</span><span class="tot">6</span></button><button class="row" data-go="s13"><span class="gn">Rings</span><span class="tot">46</span></button><button class="row" data-go="s14"><span class="gn">Ear cuffs</span><span class="tot">2</span></button></div><div class="colm wide"><button class="row" data-go="s16"><span class="gn">Other</span><span class="tot">4</span></button></div></div>
 <div class="sec" id="s0"><header><button class="back">‹ Menu</button><h2>Hoops</h2><div class="tabs"><button class="mt" data-m="Gold">Gold (18)</button><button class="mt" data-m="Silver">Silver (19)</button></div></header><div class="g" data-m="Gold"><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8538787381445_FP_01_G.jpg?v=1792452725" alt=""></div><div class="n">Abba Hoop</div><div class="sub">$79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
@@ -6630,7 +6640,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 3</div></div></div></div><div class="sec" id="s8"><header><button class="back">‹ Menu</button><h2>Pendant necklace</h2><div class="tabs"><button class="mt" data-m="Gold">Gold (64)</button><button class="mt" data-m="Silver">Silver (40)</button></div></header><div class="g" data-m="Gold"><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539254620357_FP_01_G.jpg?v=1790752508" alt=""></div><div class="n">Adelise Necklace</div><div class="sub">Clear / 40cm+5 · $89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 3</div></div></div></div><div class="sec" id="s8"><header><button class="back">‹ Menu</button><h2>Pendant necklace</h2><div class="tabs"><button class="mt" data-m="Gold">Gold (64)</button><button class="mt" data-m="Silver">Silver (40)</button></div><div class="kf"><button class="kb" data-k="all">All</button><button class="kb" data-k="coloured">Coloured</button><button class="kb" data-k="pearl">Pearl</button><button class="kb" data-k="clear">Clear</button><button class="kb" data-k="solid">Solid</button></div></header><div class="g" data-m="Gold"><div class="c" data-metal="Gold" data-k="clear"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539254620357_FP_01_G.jpg?v=1790752508" alt=""></div><div class="n">Adelise Necklace</div><div class="sub">Clear / 40cm+5 · $89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -6658,7 +6668,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/9011771965637_FP_01_G.jpg?v=1789536719" alt=""></div><div class="n">Adina Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Gold" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/9011771965637_FP_01_G.jpg?v=1789536719" alt=""></div><div class="n">Adina Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -6686,7 +6696,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 6</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8550898335941_FP_01_G.jpg?v=1792368536" alt=""></div><div class="n">Anastasia Necklace</div><div class="sub">Clear · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 6</div></div><div class="c" data-metal="Gold" data-k="clear"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8550898335941_FP_01_G.jpg?v=1792368536" alt=""></div><div class="n">Anastasia Necklace</div><div class="sub">Clear · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -6714,7 +6724,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 1</div></div><div class="c" data-metal="Gold"><div class="ph"><div class="none">No photo</div></div><div class="n">Angela Necklace</div><div class="sub">Clear / 40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 1</div></div><div class="c" data-metal="Gold" data-k="clear"><div class="ph"><div class="none">No photo</div></div><div class="n">Angela Necklace</div><div class="sub">Clear / 40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -6742,7 +6752,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 0</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10463669846213_FP_01_G.jpg?v=1795606319" alt=""></div><div class="n">Anouk Necklace</div><div class="sub">3 options</div><div class="opts"><button class="col" data-i="0">Clear · $89</button><button class="col" data-i="1">Purple · $89</button><button class="col" data-i="2">Light Pink · $89</button></div><div class="b" data-i="0"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 0</div></div><div class="c" data-metal="Gold" data-k="coloured"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10463669846213_FP_01_G.jpg?v=1795606319" alt=""></div><div class="n">Anouk Necklace</div><div class="sub">3 options</div><div class="opts"><button class="col" data-i="0">Clear · $89</button><button class="col" data-i="1">Purple · $89</button><button class="col" data-i="2">Light Pink · $89</button></div><div class="b" data-i="0"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -6826,7 +6836,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 5</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539247149253_FP_01_G.jpg?v=1792368289" alt=""></div><div class="n">Aria Necklace</div><div class="sub">Clear / 40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 5</div></div><div class="c" data-metal="Gold" data-k="clear"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539247149253_FP_01_G.jpg?v=1792368289" alt=""></div><div class="n">Aria Necklace</div><div class="sub">Clear / 40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -6854,7 +6864,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 4</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448262037701_FP_01_G.jpg?v=1795212368" alt=""></div><div class="n">Asher Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 4</div></div><div class="c" data-metal="Gold" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448262037701_FP_01_G.jpg?v=1795212368" alt=""></div><div class="n">Asher Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -6882,7 +6892,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539259535557_FP_01_G.jpg?v=1790752581" alt=""></div><div class="n">Aureon Pearl Necklace</div><div class="sub">45cm · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Gold" data-k="pearl"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539259535557_FP_01_G.jpg?v=1790752581" alt=""></div><div class="n">Aureon Pearl Necklace</div><div class="sub">45cm · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -6910,7 +6920,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 4</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448262234309_FP_01_G.jpg?v=1795212400" alt=""></div><div class="n">Baguette Pendant</div><div class="sub">5 options</div><div class="opts"><button class="col" data-i="0">Green · $89</button><button class="col" data-i="1">Purple · $89</button><button class="col" data-i="2">Red · $89</button><button class="col" data-i="3">Sapphire Blue · $89</button><button class="col" data-i="4">Clear · $89</button></div><div class="b" data-i="0"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 4</div></div><div class="c" data-metal="Gold" data-k="coloured"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448262234309_FP_01_G.jpg?v=1795212400" alt=""></div><div class="n">Baguette Pendant</div><div class="sub">5 options</div><div class="opts"><button class="col" data-i="0">Green · $89</button><button class="col" data-i="1">Purple · $89</button><button class="col" data-i="2">Red · $89</button><button class="col" data-i="3">Sapphire Blue · $89</button><button class="col" data-i="4">Clear · $89</button></div><div class="b" data-i="0"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -7050,7 +7060,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 4</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8551966081221_FP_01_G.jpg?v=1790753349" alt=""></div><div class="n">Bethany Pearl Necklace</div><div class="sub">40cm+5 · $89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 4</div></div><div class="c" data-metal="Gold" data-k="pearl"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8551966081221_FP_01_G.jpg?v=1790753349" alt=""></div><div class="n">Bethany Pearl Necklace</div><div class="sub">40cm+5 · $89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -7078,7 +7088,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 0</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539261173957_FP_01_G.jpg?v=1790752597" alt=""></div><div class="n">Buble Necklace</div><div class="sub">Clear · $89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 0</div></div><div class="c" data-metal="Gold" data-k="clear"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539261173957_FP_01_G.jpg?v=1790752597" alt=""></div><div class="n">Buble Necklace</div><div class="sub">Clear · $89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -7106,7 +7116,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 0</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8550894469317_FP_01_G.jpg?v=1790753277" alt=""></div><div class="n">Centred Pearl Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 0</div></div><div class="c" data-metal="Gold" data-k="pearl"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8550894469317_FP_01_G.jpg?v=1790753277" alt=""></div><div class="n">Centred Pearl Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -7134,7 +7144,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 5</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539255505093_FP_01_G.jpg?v=1790752545" alt=""></div><div class="n">Charis Necklace</div><div class="sub">40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 5</div></div><div class="c" data-metal="Gold" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539255505093_FP_01_G.jpg?v=1790752545" alt=""></div><div class="n">Charis Necklace</div><div class="sub">40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -7162,7 +7172,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 0</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/9013223981253_FP_02_G.jpg?v=1790838860" alt=""></div><div class="n">Chavri Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 0</div></div><div class="c" data-metal="Gold" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/9013223981253_FP_02_G.jpg?v=1790838860" alt=""></div><div class="n">Chavri Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -7190,7 +7200,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 0</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8543823691973_FP_01_G.jpg?v=1792359102" alt=""></div><div class="n">Cheer Necklace</div><div class="sub">Clear / 45cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 0</div></div><div class="c" data-metal="Gold" data-k="clear"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8543823691973_FP_01_G.jpg?v=1792359102" alt=""></div><div class="n">Cheer Necklace</div><div class="sub">Clear / 45cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -7218,7 +7228,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/christos-necklace_01_web.jpg?v=1789302322" alt=""></div><div class="n">Christos Necklace</div><div class="sub">Clear · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Gold" data-k="clear"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/christos-necklace_01_web.jpg?v=1789302322" alt=""></div><div class="n">Christos Necklace</div><div class="sub">Clear · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -7246,7 +7256,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 9</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8550354976965_FP_01_G.jpg?v=1790753156" alt=""></div><div class="n">Damile Necklace</div><div class="sub">$79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 9</div></div><div class="c" data-metal="Gold" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8550354976965_FP_01_G.jpg?v=1790753156" alt=""></div><div class="n">Damile Necklace</div><div class="sub">$79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -7274,7 +7284,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539207893189_FP_01_G.jpg?v=1790752439" alt=""></div><div class="n">Daylight Necklace</div><div class="sub">41cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Gold" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539207893189_FP_01_G.jpg?v=1790752439" alt=""></div><div class="n">Daylight Necklace</div><div class="sub">41cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -7302,7 +7312,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 8</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448262824133_FP_01_G.jpg?v=1795212467" alt=""></div><div class="n">Delphine Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 8</div></div><div class="c" data-metal="Gold" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448262824133_FP_01_G.jpg?v=1795212467" alt=""></div><div class="n">Delphine Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -7330,7 +7340,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8551764689093_FP_01_G.jpg?v=1790751596" alt=""></div><div class="n">Diora Necklace</div><div class="sub">40cm+5 · $89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Gold" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8551764689093_FP_01_G.jpg?v=1790751596" alt=""></div><div class="n">Diora Necklace</div><div class="sub">40cm+5 · $89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -7358,7 +7368,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8550334333125_FP_01_G.jpg?v=1790753130" alt=""></div><div class="n">Dova Pearl Necklace</div><div class="sub">$109</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Gold" data-k="pearl"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8550334333125_FP_01_G.jpg?v=1790753130" alt=""></div><div class="n">Dova Pearl Necklace</div><div class="sub">$109</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -7386,7 +7396,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8550893191365_FP_01_G.jpg?v=1790753262" alt=""></div><div class="n">Dunamis Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Gold" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8550893191365_FP_01_G.jpg?v=1790753262" alt=""></div><div class="n">Dunamis Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -7414,7 +7424,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8550893027525_FP_01_G.jpg?v=1790753250" alt=""></div><div class="n">Dune Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Gold" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8550893027525_FP_01_G.jpg?v=1790753250" alt=""></div><div class="n">Dune Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -7442,7 +7452,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/9013224079557_FP_01_G.jpg?v=1792368630" alt=""></div><div class="n">Estrella Necklace</div><div class="sub">$79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Gold" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/9013224079557_FP_01_G.jpg?v=1792368630" alt=""></div><div class="n">Estrella Necklace</div><div class="sub">$79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -7470,7 +7480,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: -5</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539250950341_FP_01_G.jpg?v=1792358870" alt=""></div><div class="n">Firestone Necklace</div><div class="sub">Clear / 40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: -5</div></div><div class="c" data-metal="Gold" data-k="clear"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539250950341_FP_01_G.jpg?v=1792358870" alt=""></div><div class="n">Firestone Necklace</div><div class="sub">Clear / 40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -7498,7 +7508,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/9013224177861_FP_01_G.jpg?v=1792359586" alt=""></div><div class="n">Forgiven Necklace</div><div class="sub">$79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Gold" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/9013224177861_FP_01_G.jpg?v=1792359586" alt=""></div><div class="n">Forgiven Necklace</div><div class="sub">$79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -7526,7 +7536,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: -1</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448263872709_FP_01_G.jpg?v=1795212615" alt=""></div><div class="n">Hazel Necklace</div><div class="sub">$109</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: -1</div></div><div class="c" data-metal="Gold" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448263872709_FP_01_G.jpg?v=1795212615" alt=""></div><div class="n">Hazel Necklace</div><div class="sub">$109</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -7554,7 +7564,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/9013224243397_FP_01_G.jpg?v=1790753522" alt=""></div><div class="n">Hila Necklace</div><div class="sub">$109</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Gold" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/9013224243397_FP_01_G.jpg?v=1790753522" alt=""></div><div class="n">Hila Necklace</div><div class="sub">$109</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -7582,7 +7592,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: -3</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/9011772653765_FP_03_G.jpg?v=1791342583" alt=""></div><div class="n">Initial Necklace</div><div class="sub">7 options</div><div class="opts"><button class="col" data-i="0">L · $79</button><button class="col" data-i="1">M · $79</button><button class="col" data-i="2">S · $79</button><button class="col" data-i="3">K · $79</button><button class="col" data-i="4">C · $79</button><button class="col" data-i="5">J · $79</button><button class="col" data-i="6">A · $79</button></div><div class="b" data-i="0"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: -3</div></div><div class="c" data-metal="Gold" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/9011772653765_FP_03_G.jpg?v=1791342583" alt=""></div><div class="n">Initial Necklace</div><div class="sub">7 options</div><div class="opts"><button class="col" data-i="0">L · $79</button><button class="col" data-i="1">M · $79</button><button class="col" data-i="2">S · $79</button><button class="col" data-i="3">K · $79</button><button class="col" data-i="4">C · $79</button><button class="col" data-i="5">J · $79</button><button class="col" data-i="6">A · $79</button></div><div class="b" data-i="0"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -7778,7 +7788,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448263971013_FP_01_G.jpg?v=1795212641" alt=""></div><div class="n">Isla Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Gold" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448263971013_FP_01_G.jpg?v=1795212641" alt=""></div><div class="n">Isla Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -7806,7 +7816,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10463670632645_FP_01_G.jpg?v=1795606426" alt=""></div><div class="n">Isolde Pearl Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Gold" data-k="pearl"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10463670632645_FP_01_G.jpg?v=1795606426" alt=""></div><div class="n">Isolde Pearl Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -7834,7 +7844,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 6</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/2026-09-01_18.16.38.jpg?v=1789021412" alt=""></div><div class="n">Ivory Necklace</div><div class="sub">40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 6</div></div><div class="c" data-metal="Gold" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/2026-09-01_18.16.38.jpg?v=1789021412" alt=""></div><div class="n">Ivory Necklace</div><div class="sub">40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -7862,7 +7872,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: -1</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448264265925_FP_01_G.jpg?v=1795212693" alt=""></div><div class="n">Judah Necklace</div><div class="sub">$109</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: -1</div></div><div class="c" data-metal="Gold" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448264265925_FP_01_G.jpg?v=1795212693" alt=""></div><div class="n">Judah Necklace</div><div class="sub">$109</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -7890,7 +7900,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8542776623301_FP_01_G.jpg?v=1790753093" alt=""></div><div class="n">Lorien Necklace</div><div class="sub">40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Gold" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8542776623301_FP_01_G.jpg?v=1790753093" alt=""></div><div class="n">Lorien Necklace</div><div class="sub">40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -7918,7 +7928,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539746336965_FP_01_G.jpg?v=1790752756" alt=""></div><div class="n">Love Necklace</div><div class="sub">38cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Gold" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539746336965_FP_01_G.jpg?v=1790752756" alt=""></div><div class="n">Love Necklace</div><div class="sub">38cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -7946,7 +7956,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/LuminaraNecklaceGold.png?v=1769862190" alt=""></div><div class="n">Luminara Necklace</div><div class="sub">40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Gold" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/LuminaraNecklaceGold.png?v=1769862190" alt=""></div><div class="n">Luminara Necklace</div><div class="sub">40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -7974,7 +7984,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 7</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448264855749_FP_01_G.jpg?v=1795212747" alt=""></div><div class="n">Maeve Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 7</div></div><div class="c" data-metal="Gold" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448264855749_FP_01_G.jpg?v=1795212747" alt=""></div><div class="n">Maeve Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -8002,7 +8012,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539251212485_FP_01_G.jpg?v=1792358884" alt=""></div><div class="n">Magnus Necklace</div><div class="sub">Clear / 40cm+5 · $89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Gold" data-k="clear"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539251212485_FP_01_G.jpg?v=1792358884" alt=""></div><div class="n">Magnus Necklace</div><div class="sub">Clear / 40cm+5 · $89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -8030,7 +8040,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539262517445_FP_01_G.jpg?v=1790752610" alt=""></div><div class="n">Marlowe Pearl Necklace</div><div class="sub">40cm+5 · $89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Gold" data-k="pearl"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539262517445_FP_01_G.jpg?v=1790752610" alt=""></div><div class="n">Marlowe Pearl Necklace</div><div class="sub">40cm+5 · $89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -8058,7 +8068,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: -1</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/9013224472773_FP_01_G.jpg?v=1793408658" alt=""></div><div class="n">Meira Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: -1</div></div><div class="c" data-metal="Gold" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/9013224472773_FP_01_G.jpg?v=1793408658" alt=""></div><div class="n">Meira Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -8086,7 +8096,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 1</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448265117893_FP_01_G.jpg?v=1795212780" alt=""></div><div class="n">Mercy Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 1</div></div><div class="c" data-metal="Gold" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448265117893_FP_01_G.jpg?v=1795212780" alt=""></div><div class="n">Mercy Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -8114,7 +8124,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 1</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539257733317_FP_01_G.jpg?v=1792358922" alt=""></div><div class="n">Miranda Necklace</div><div class="sub">40cm+5 · $89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 1</div></div><div class="c" data-metal="Gold" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539257733317_FP_01_G.jpg?v=1792358922" alt=""></div><div class="n">Miranda Necklace</div><div class="sub">40cm+5 · $89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -8142,7 +8152,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539257340101_FP_01_G.jpg?v=1792358908" alt=""></div><div class="n">Moonstone Necklace</div><div class="sub">38cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Gold" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539257340101_FP_01_G.jpg?v=1792358908" alt=""></div><div class="n">Moonstone Necklace</div><div class="sub">38cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -8170,7 +8180,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 8</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448265412805_FP_01_G.jpg?v=1795212825" alt=""></div><div class="n">Nina Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 8</div></div><div class="c" data-metal="Gold" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448265412805_FP_01_G.jpg?v=1795212825" alt=""></div><div class="n">Nina Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -8198,7 +8208,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 6</div></div><div class="c" data-metal="Gold"><div class="ph"><div class="none">No photo</div></div><div class="n">OG Teardrop Necklace</div><div class="sub">40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 6</div></div><div class="c" data-metal="Gold" data-k="solid"><div class="ph"><div class="none">No photo</div></div><div class="n">OG Teardrop Necklace</div><div class="sub">40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -8226,7 +8236,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 0</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448265543877_FP_01_G.jpg?v=1795212836" alt=""></div><div class="n">Odette Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 0</div></div><div class="c" data-metal="Gold" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448265543877_FP_01_G.jpg?v=1795212836" alt=""></div><div class="n">Odette Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -8254,7 +8264,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 5</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8556348244165_FP_01_G.jpg?v=1792359447" alt=""></div><div class="n">Oh Necklace</div><div class="sub">40cm+5 · $89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 5</div></div><div class="c" data-metal="Gold" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8556348244165_FP_01_G.jpg?v=1792359447" alt=""></div><div class="n">Oh Necklace</div><div class="sub">40cm+5 · $89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -8282,7 +8292,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539247771845_FP_01_S.jpg?v=1792368314" alt=""></div><div class="n">Opal Necklace</div><div class="sub">40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Gold" data-k="coloured"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539247771845_FP_01_S.jpg?v=1792368314" alt=""></div><div class="n">Opal Necklace</div><div class="sub">40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -8310,7 +8320,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 0</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539254030533_FP_01_G.jpg?v=1790752495" alt=""></div><div class="n">Opal Star Necklace</div><div class="sub">40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 0</div></div><div class="c" data-metal="Gold" data-k="coloured"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539254030533_FP_01_G.jpg?v=1790752495" alt=""></div><div class="n">Opal Star Necklace</div><div class="sub">40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -8338,7 +8348,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 1</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8556366102725_FP_01_G.jpg?v=1792368580" alt=""></div><div class="n">Ozone Necklace</div><div class="sub">40cm+5 · $89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 1</div></div><div class="c" data-metal="Gold" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8556366102725_FP_01_G.jpg?v=1792368580" alt=""></div><div class="n">Ozone Necklace</div><div class="sub">40cm+5 · $89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -8366,7 +8376,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539254915269_FP_01_G.jpg?v=1790752520" alt=""></div><div class="n">Palace Necklace</div><div class="sub">Clear / 40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Gold" data-k="clear"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539254915269_FP_01_G.jpg?v=1790752520" alt=""></div><div class="n">Palace Necklace</div><div class="sub">Clear / 40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -8394,7 +8404,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 5</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448265904325_FP_01_G.jpg?v=1795212904" alt=""></div><div class="n">Pippa Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 5</div></div><div class="c" data-metal="Gold" data-k="pearl"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448265904325_FP_01_G.jpg?v=1795212904" alt=""></div><div class="n">Pippa Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -8422,7 +8432,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448266133701_FP_01_G.jpg?v=1795212923" alt=""></div><div class="n">Romy Necklace</div><div class="sub">2 options</div><div class="opts"><button class="col" data-i="0">Red · $109</button><button class="col" data-i="1">Yellow · $109</button></div><div class="b" data-i="0"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Gold" data-k="coloured"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448266133701_FP_01_G.jpg?v=1795212923" alt=""></div><div class="n">Romy Necklace</div><div class="sub">2 options</div><div class="opts"><button class="col" data-i="0">Red · $109</button><button class="col" data-i="1">Yellow · $109</button></div><div class="b" data-i="0"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -8478,7 +8488,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448266264773_FP_01_G.jpg?v=1795212959" alt=""></div><div class="n">Sadie Necklace</div><div class="sub">2 options</div><div class="opts"><button class="col" data-i="0">Purple · $89</button><button class="col" data-i="1">Green · $89</button></div><div class="b" data-i="0"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Gold" data-k="coloured"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448266264773_FP_01_G.jpg?v=1795212959" alt=""></div><div class="n">Sadie Necklace</div><div class="sub">2 options</div><div class="opts"><button class="col" data-i="0">Purple · $89</button><button class="col" data-i="1">Green · $89</button></div><div class="b" data-i="0"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -8534,7 +8544,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8550540509381_FP_01_G.jpg?v=1790753184" alt=""></div><div class="n">Sanctum Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Gold" data-k="pearl"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8550540509381_FP_01_G.jpg?v=1790753184" alt=""></div><div class="n">Sanctum Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -8562,7 +8572,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 4</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539258028229_FP_01_G.jpg?v=1792368370" alt=""></div><div class="n">Sole Pearl Necklace</div><div class="sub">$79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 4</div></div><div class="c" data-metal="Gold" data-k="pearl"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539258028229_FP_01_G.jpg?v=1792368370" alt=""></div><div class="n">Sole Pearl Necklace</div><div class="sub">$79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -8590,7 +8600,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: -1</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539251474629_FP_01_G.jpg?v=1792368343" alt=""></div><div class="n">Sotiel Opal Necklace</div><div class="sub">40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: -1</div></div><div class="c" data-metal="Gold" data-k="coloured"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539251474629_FP_01_G.jpg?v=1792368343" alt=""></div><div class="n">Sotiel Opal Necklace</div><div class="sub">40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -8618,7 +8628,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 0</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539245478085_FP_01_G.jpg?v=1790146252" alt=""></div><div class="n">St Eliza Necklace</div><div class="sub">Clear / 40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 0</div></div><div class="c" data-metal="Gold" data-k="clear"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539245478085_FP_01_G.jpg?v=1790146252" alt=""></div><div class="n">St Eliza Necklace</div><div class="sub">Clear / 40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -8646,7 +8656,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: -1</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/9011775242437_FP_01_G.jpg?v=1790144900" alt=""></div><div class="n">To Love Necklace</div><div class="sub">$79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: -1</div></div><div class="c" data-metal="Gold" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/9011775242437_FP_01_G.jpg?v=1790144900" alt=""></div><div class="n">To Love Necklace</div><div class="sub">$79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -8674,7 +8684,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 4</div></div><div class="c" data-metal="Gold"><div class="ph"><div class="none">No photo</div></div><div class="n">Tulipa Necklace</div><div class="sub">40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 4</div></div><div class="c" data-metal="Gold" data-k="solid"><div class="ph"><div class="none">No photo</div></div><div class="n">Tulipa Necklace</div><div class="sub">40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -8702,7 +8712,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 0</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539255111877_FP_01_G.jpg?v=1790752533" alt=""></div><div class="n">Valencia Necklace</div><div class="sub">45cm+5 · $89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 0</div></div><div class="c" data-metal="Gold" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539255111877_FP_01_G.jpg?v=1790752533" alt=""></div><div class="n">Valencia Necklace</div><div class="sub">45cm+5 · $89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -8730,7 +8740,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539253506245_FP_01_G.jpg?v=1792358897" alt=""></div><div class="n">Virtue Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Gold" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539253506245_FP_01_G.jpg?v=1792358897" alt=""></div><div class="n">Virtue Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -8758,7 +8768,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539255963845_FP_01_G.jpg?v=1792368357" alt=""></div><div class="n">Weise Necklace</div><div class="sub">Clear · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Gold" data-k="clear"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539255963845_FP_01_G.jpg?v=1792368357" alt=""></div><div class="n">Weise Necklace</div><div class="sub">Clear · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -8786,7 +8796,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 1</div></div><div class="c" data-metal="Gold"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448267182277_FP_01_G.jpg?v=1795213038" alt=""></div><div class="n">Willa Necklace</div><div class="sub">$109</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 1</div></div><div class="c" data-metal="Gold" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448267182277_FP_01_G.jpg?v=1795213038" alt=""></div><div class="n">Willa Necklace</div><div class="sub">$109</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -8814,7 +8824,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 2</div></div></div><div class="g" data-m="Silver"><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/9011771998405_FP_01_S.jpg?v=1793408636" alt=""></div><div class="n">Agape Necklace</div><div class="sub">40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 2</div></div></div><div class="g" data-m="Silver"><div class="c" data-metal="Silver" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/9011771998405_FP_01_S.jpg?v=1793408636" alt=""></div><div class="n">Agape Necklace</div><div class="sub">40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -8842,7 +8852,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 5</div></div><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10463669846213_FP_01_S.jpg?v=1795606325" alt=""></div><div class="n">Anouk Necklace</div><div class="sub">Purple · $89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 5</div></div><div class="c" data-metal="Silver" data-k="coloured"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10463669846213_FP_01_S.jpg?v=1795606325" alt=""></div><div class="n">Anouk Necklace</div><div class="sub">Purple · $89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -8870,7 +8880,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 5</div></div><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539247149253_FP_01_S_1f957952-27c2-4d9f-8fa0-32071c6ea3e6.jpg?v=1792368296" alt=""></div><div class="n">Aria Necklace</div><div class="sub">Clear / 40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 5</div></div><div class="c" data-metal="Silver" data-k="clear"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539247149253_FP_01_S_1f957952-27c2-4d9f-8fa0-32071c6ea3e6.jpg?v=1792368296" alt=""></div><div class="n">Aria Necklace</div><div class="sub">Clear / 40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -8898,7 +8908,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448262037701_FP_01_G.jpg?v=1795212368" alt=""></div><div class="n">Asher Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Silver" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448262037701_FP_01_G.jpg?v=1795212368" alt=""></div><div class="n">Asher Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -8926,7 +8936,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/9013223981253_FP_01_S.jpg?v=1790837448" alt=""></div><div class="n">Chavri Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Silver" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/9013223981253_FP_01_S.jpg?v=1790837448" alt=""></div><div class="n">Chavri Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -8954,7 +8964,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 0</div></div><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8543823691973_FP_01_S.jpg?v=1792359109" alt=""></div><div class="n">Cheer Necklace</div><div class="sub">Clear / 45cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 0</div></div><div class="c" data-metal="Silver" data-k="clear"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8543823691973_FP_01_S.jpg?v=1792359109" alt=""></div><div class="n">Cheer Necklace</div><div class="sub">Clear / 45cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -8982,7 +8992,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 0</div></div><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539207893189_FP_01_S.jpg?v=1790837706" alt=""></div><div class="n">Daylight Necklace</div><div class="sub">41cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 0</div></div><div class="c" data-metal="Silver" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539207893189_FP_01_S.jpg?v=1790837706" alt=""></div><div class="n">Daylight Necklace</div><div class="sub">41cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -9010,7 +9020,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 4</div></div><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448262824133_FP_01_G.jpg?v=1795212467" alt=""></div><div class="n">Delphine Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 4</div></div><div class="c" data-metal="Silver" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448262824133_FP_01_G.jpg?v=1795212467" alt=""></div><div class="n">Delphine Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -9038,7 +9048,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 1</div></div><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/9011772522693_FP_01_S.jpg?v=1792359499" alt=""></div><div class="n">Eliana Pearl Necklace</div><div class="sub">$109</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 1</div></div><div class="c" data-metal="Silver" data-k="pearl"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/9011772522693_FP_01_S.jpg?v=1792359499" alt=""></div><div class="n">Eliana Pearl Necklace</div><div class="sub">$109</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -9066,7 +9076,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 4</div></div><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539243512005_FP_01_S.jpg?v=1792358857" alt=""></div><div class="n">Everly Necklace</div><div class="sub">Green / 40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 4</div></div><div class="c" data-metal="Silver" data-k="coloured"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539243512005_FP_01_S.jpg?v=1792358857" alt=""></div><div class="n">Everly Necklace</div><div class="sub">Green / 40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -9094,7 +9104,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 5</div></div><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539248591045_FP_01_S.jpg?v=1792368330" alt=""></div><div class="n">Flotal Necklace</div><div class="sub">Clear / 40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 5</div></div><div class="c" data-metal="Silver" data-k="clear"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539248591045_FP_01_S.jpg?v=1792368330" alt=""></div><div class="n">Flotal Necklace</div><div class="sub">Clear / 40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -9122,7 +9132,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 1</div></div><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/9013224177861_FP_01_S.jpg?v=1792359591" alt=""></div><div class="n">Forgiven Necklace</div><div class="sub">$79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 1</div></div><div class="c" data-metal="Silver" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/9013224177861_FP_01_S.jpg?v=1792359591" alt=""></div><div class="n">Forgiven Necklace</div><div class="sub">$79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -9150,7 +9160,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: -2</div></div><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448263872709_FP_01_S.jpg?v=1795212621" alt=""></div><div class="n">Hazel Necklace</div><div class="sub">$109</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: -2</div></div><div class="c" data-metal="Silver" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448263872709_FP_01_S.jpg?v=1795212621" alt=""></div><div class="n">Hazel Necklace</div><div class="sub">$109</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -9178,7 +9188,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448263971013_FP_01_S.jpg?v=1795212646" alt=""></div><div class="n">Isla Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Silver" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448263971013_FP_01_S.jpg?v=1795212646" alt=""></div><div class="n">Isla Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -9206,7 +9216,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 5</div></div><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10463670632645_FP_01_S.jpg?v=1795606430" alt=""></div><div class="n">Isolde Pearl Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 5</div></div><div class="c" data-metal="Silver" data-k="pearl"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10463670632645_FP_01_S.jpg?v=1795606430" alt=""></div><div class="n">Isolde Pearl Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -9234,7 +9244,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 6</div></div><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/JewelBowNecklaceSilver.png?v=1769946443" alt=""></div><div class="n">Jewel Bow Necklace</div><div class="sub">40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 6</div></div><div class="c" data-metal="Silver" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/JewelBowNecklaceSilver.png?v=1769946443" alt=""></div><div class="n">Jewel Bow Necklace</div><div class="sub">40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -9262,7 +9272,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448264265925_FP_01_G.jpg?v=1795212693" alt=""></div><div class="n">Judah Necklace</div><div class="sub">$109</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Silver" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448264265925_FP_01_G.jpg?v=1795212693" alt=""></div><div class="n">Judah Necklace</div><div class="sub">$109</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -9290,7 +9300,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448264396997_FP_01_S.jpg?v=1795212705" alt=""></div><div class="n">Kairos Necklace</div><div class="sub">$109</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Silver" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448264396997_FP_01_S.jpg?v=1795212705" alt=""></div><div class="n">Kairos Necklace</div><div class="sub">$109</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -9318,7 +9328,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 9</div></div><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8542776623301_FP_01_S.jpg?v=1790837949" alt=""></div><div class="n">Lorien Necklace</div><div class="sub">40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 9</div></div><div class="c" data-metal="Silver" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8542776623301_FP_01_S.jpg?v=1790837949" alt=""></div><div class="n">Lorien Necklace</div><div class="sub">40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -9346,7 +9356,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 1</div></div><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539746336965_FP_01_S.jpg?v=1790837775" alt=""></div><div class="n">Love Necklace</div><div class="sub">38cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 1</div></div><div class="c" data-metal="Silver" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539746336965_FP_01_S.jpg?v=1790837775" alt=""></div><div class="n">Love Necklace</div><div class="sub">38cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -9374,7 +9384,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 5</div></div><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/9011774685381_FP_01_S.jpg?v=1792368603" alt=""></div><div class="n">Lucci Necklace</div><div class="sub">$79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 5</div></div><div class="c" data-metal="Silver" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/9011774685381_FP_01_S.jpg?v=1792368603" alt=""></div><div class="n">Lucci Necklace</div><div class="sub">$79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -9402,7 +9412,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 1</div></div><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/LuminaraNecklaceSilver_e76fc76a-0340-4c29-b341-b0dad6c5eebe.png?v=1769862190" alt=""></div><div class="n">Luminara Necklace</div><div class="sub">40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 1</div></div><div class="c" data-metal="Silver" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/LuminaraNecklaceSilver_e76fc76a-0340-4c29-b341-b0dad6c5eebe.png?v=1769862190" alt=""></div><div class="n">Luminara Necklace</div><div class="sub">40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -9430,7 +9440,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 5</div></div><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448264626373_FP_01_S.jpg?v=1795212732" alt=""></div><div class="n">Luna Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 5</div></div><div class="c" data-metal="Silver" data-k="clear"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448264626373_FP_01_S.jpg?v=1795212732" alt=""></div><div class="n">Luna Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -9458,7 +9468,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 5</div></div><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448264855749_FP_01_G.jpg?v=1795212747" alt=""></div><div class="n">Maeve Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 5</div></div><div class="c" data-metal="Silver" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448264855749_FP_01_G.jpg?v=1795212747" alt=""></div><div class="n">Maeve Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -9486,7 +9496,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/9011774783685_FP_01_S.jpg?v=1792359526" alt=""></div><div class="n">Mason Necklace</div><div class="sub">$79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Silver" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/9011774783685_FP_01_S.jpg?v=1792359526" alt=""></div><div class="n">Mason Necklace</div><div class="sub">$79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -9514,7 +9524,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/9013224472773_FP_01_G.jpg?v=1793408658" alt=""></div><div class="n">Meira Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Silver" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/9013224472773_FP_01_G.jpg?v=1793408658" alt=""></div><div class="n">Meira Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -9542,7 +9552,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448265117893_FP_01_S.jpg?v=1795212785" alt=""></div><div class="n">Mercy Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Silver" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448265117893_FP_01_S.jpg?v=1795212785" alt=""></div><div class="n">Mercy Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -9570,7 +9580,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448265412805_FP_01_G.jpg?v=1795212825" alt=""></div><div class="n">Nina Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Silver" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448265412805_FP_01_G.jpg?v=1795212825" alt=""></div><div class="n">Nina Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -9598,7 +9608,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 6</div></div><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539247771845_FP_01_S.jpg?v=1792368314" alt=""></div><div class="n">Opal Necklace</div><div class="sub">40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 6</div></div><div class="c" data-metal="Silver" data-k="coloured"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539247771845_FP_01_S.jpg?v=1792368314" alt=""></div><div class="n">Opal Necklace</div><div class="sub">40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -9626,7 +9636,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448265904325_FP_01_S.jpg?v=1795212909" alt=""></div><div class="n">Pippa Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Silver" data-k="pearl"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448265904325_FP_01_S.jpg?v=1795212909" alt=""></div><div class="n">Pippa Necklace</div><div class="sub">$89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -9654,7 +9664,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448266264773_FP_01_S.jpg?v=1795212964" alt=""></div><div class="n">Sadie Necklace</div><div class="sub">2 options</div><div class="opts"><button class="col" data-i="0">Green · $89</button><button class="col" data-i="1">Purple · $89</button></div><div class="b" data-i="0"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Silver" data-k="coloured"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448266264773_FP_01_S.jpg?v=1795212964" alt=""></div><div class="n">Sadie Necklace</div><div class="sub">2 options</div><div class="opts"><button class="col" data-i="0">Green · $89</button><button class="col" data-i="1">Purple · $89</button></div><div class="b" data-i="0"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -9710,7 +9720,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Silver"><div class="ph"><div class="none">No photo</div></div><div class="n">Serene Necklace</div><div class="sub">40cm+5 · $109</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 2</div></div><div class="c" data-metal="Silver" data-k="solid"><div class="ph"><div class="none">No photo</div></div><div class="n">Serene Necklace</div><div class="sub">40cm+5 · $109</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -9738,7 +9748,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 0</div></div><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/Sole_pearl_necklace_silver.jpg?v=1793076618" alt=""></div><div class="n">Sole Pearl Necklace</div><div class="sub">$79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 0</div></div><div class="c" data-metal="Silver" data-k="pearl"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/Sole_pearl_necklace_silver.jpg?v=1793076618" alt=""></div><div class="n">Sole Pearl Necklace</div><div class="sub">$79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -9766,7 +9776,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Silver"><div class="ph"><div class="none">No photo</div></div><div class="n">St Agabus Necklace</div><div class="sub">40cm+5 · $89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Silver" data-k="solid"><div class="ph"><div class="none">No photo</div></div><div class="n">St Agabus Necklace</div><div class="sub">40cm+5 · $89</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -9794,7 +9804,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 0</div></div><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539245478085_FP_02_S.jpg?v=1790837723" alt=""></div><div class="n">St Eliza Necklace</div><div class="sub">Clear / 40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 0</div></div><div class="c" data-metal="Silver" data-k="clear"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/8539245478085_FP_02_S.jpg?v=1790837723" alt=""></div><div class="n">St Eliza Necklace</div><div class="sub">Clear / 40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -9822,7 +9832,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 1</div></div><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/9011775242437_FP_02_S.jpg?v=1790838084" alt=""></div><div class="n">To Love Necklace</div><div class="sub">$79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 1</div></div><div class="c" data-metal="Silver" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/9011775242437_FP_02_S.jpg?v=1790838084" alt=""></div><div class="n">To Love Necklace</div><div class="sub">$79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -9850,7 +9860,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 5</div></div><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/9011775307973_FP_01_S_f72f5b43-ef8d-4df7-92ad-14370fc8de3a.jpg?v=1792359562" alt=""></div><div class="n">Topher Necklace</div><div class="sub">$79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 5</div></div><div class="c" data-metal="Silver" data-k="coloured"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/9011775307973_FP_01_S_f72f5b43-ef8d-4df7-92ad-14370fc8de3a.jpg?v=1792359562" alt=""></div><div class="n">Topher Necklace</div><div class="sub">$79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -9878,7 +9888,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/UtopiaNecklaceSilver_3dbe74a1-1252-479f-9286-4ead39309f05.png?v=1770000574" alt=""></div><div class="n">Utopia Necklace</div><div class="sub">40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Silver" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/UtopiaNecklaceSilver_3dbe74a1-1252-479f-9286-4ead39309f05.png?v=1770000574" alt=""></div><div class="n">Utopia Necklace</div><div class="sub">40cm+5 · $79</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -9906,7 +9916,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 0</div></div><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448267182277_FP_01_G.jpg?v=1795213038" alt=""></div><div class="n">Willa Necklace</div><div class="sub">$109</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 0</div></div><div class="c" data-metal="Silver" data-k="solid"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448267182277_FP_01_G.jpg?v=1795213038" alt=""></div><div class="n">Willa Necklace</div><div class="sub">$109</div><div class="b single"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.50 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -9934,7 +9944,7 @@ header h2{font-size:20px;margin:0;flex:1}
         <rect x="32.000mm" y="1.000mm" width="0.800mm" height="12.000mm" style="fill:black;"/>
     </g>
 </svg>
-</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Silver"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448268296389_FP_01_S.jpg?v=1795213066" alt=""></div><div class="n">Zara Necklace</div><div class="sub">2 options</div><div class="opts"><button class="col" data-i="0">1ct · $89</button><button class="col" data-i="1">0.5ct · $89</button></div><div class="b" data-i="0"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 111.87 52.91" preserveAspectRatio="none">
+</div><div class="stk">Stock: 3</div></div><div class="c" data-metal="Silver" data-k="clear"><div class="ph"><img src="https://cdn.shopify.com/s/files/1/0746/9115/0021/files/10448268296389_FP_01_S.jpg?v=1795213066" alt=""></div><div class="n">Zara Necklace</div><div class="sub">2 options</div><div class="opts"><button class="col" data-i="0">1ct · $89</button><button class="col" data-i="1">0.5ct · $89</button></div><div class="b" data-i="0"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 111.87 52.91" preserveAspectRatio="none">
     <!--Autogenerated with python-barcode 0.16.1-->
     <g id="barcode_group">
         <rect width="100%" height="100%" style="fill:white"/>
@@ -14623,16 +14633,24 @@ header h2{font-size:20px;margin:0;flex:1}
 </div></div></div></div>
 <script>
 // open a group at the chosen metal (Gold / Silver button on the menu)
-function openSec(id,metal){
+function openSec(id,metal,k){
   document.querySelectorAll(".sec").forEach(s=>s.classList.toggle("on",s.id===id));
   document.body.classList.toggle("inSec",!!id);
-  if(id){const s=document.getElementById(id);const mt=s.querySelector(".mt");if(mt)pickMetal(s,metal||mt.dataset.m);}
+  if(id){const s=document.getElementById(id);if(s.querySelector(".kf"))pickKind(s,k||"all");const mt=s.querySelector(".mt");if(mt)pickMetal(s,metal||mt.dataset.m);}
   scrollTo(0,0);}
 // Gold / Silver tabs inside a group
 function pickMetal(s,m){
   s.querySelectorAll(".mt").forEach(b=>b.classList.toggle("on",b.dataset.m===m));
   s.querySelectorAll(".g").forEach(g=>g.classList.toggle("on",g.dataset.m===m));scrollTo(0,0);}
-document.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>openSec(b.dataset.go,b.dataset.m));
+// Pendant split: show only one kind of tile; the Gold/Silver counts follow it
+function pickKind(s,k){
+  if(k==="all")s.removeAttribute("data-k");else s.dataset.k=k;
+  s.querySelectorAll(".kb").forEach(b=>b.classList.toggle("on",b.dataset.k===k));
+  s.querySelectorAll(".mt").forEach(b=>{const n=s.querySelectorAll('.g[data-m="'+b.dataset.m+'"] .c'+(k==="all"?"":'[data-k="'+k+'"]')).length;
+    b.textContent=b.dataset.m+" ("+n+")";});
+  scrollTo(0,0);}
+document.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>openSec(b.dataset.go,b.dataset.m,b.dataset.k));
+document.querySelectorAll(".kb").forEach(b=>b.onclick=()=>{closeAll();pickKind(b.closest(".sec"),b.dataset.k);});
 document.querySelectorAll(".back").forEach(b=>b.onclick=()=>openSec(null));
 document.querySelectorAll(".sec").forEach(s=>s.querySelectorAll(".mt").forEach(b=>b.onclick=()=>pickMetal(s,b.dataset.m)));
 // tap a tile: a short barcode (or option buttons) shows under its photo - only one tile open at a time
